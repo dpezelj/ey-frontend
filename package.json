@@ -12,12 +12,24 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-cookie": "^4.1.1",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.0",
+    "react-html-parser": "^2.0.2",
+    "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.6",
     "@types/node": "^18.15.5",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@types/react-html-parser": "^2.0.2",
+    "@types/react-slick": "^0.23.10",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.47.0",
     "@vitejs/plugin-react": "^3.1.0",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.6.0",
@@ -30,10 +42,8 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.47.0",
-    "typescript": "^4.9.3",
     "prettier": "2.8.4",
+    "typescript": "^4.9.3",
     "vite": "^4.2.0"
   }
 }

@@ -1,16 +1,14 @@
-export const FooterItems = [
+export const footerItems = [
   {
     itemName: "pet-facts.com",
-    subItems: [
-      {
-        itemName: "About us",
-      },
-      {
-        itemName: "Careers",
-      },
-      {
-        itemName: "FAQ",
-      },
-    ],
+    subItems: ["About us", "Careers", "FAQ"],
+  },
+  {
+    itemName: "our brands",
+    subItems: ["Supercoat", "Fancy Feast", "Pro Plan", "Beyond"],
+  },
+  {
+    itemName: "contact us",
+    subItems: ["Contact us", "Terms & Conditions", "Privacy Policy"],
   },
 ];

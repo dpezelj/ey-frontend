@@ -1,8 +1,19 @@
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  background: #F7F7F7;
+}
+
+@keyframes dialogAnim {
+  0% {
+    transform: translateX(100%);  }
+  100% {
+    transform: translateX(0%);
+  }
+}  
+
+
+.carousel.carousel-slider {
+  overflow: unset !important;
 }
 
