@@ -1,3 +1,4 @@
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import ReactHtmlParser from "react-html-parser";
 import { Box, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
@@ -81,7 +82,9 @@ export const ImageWithTextSection = ({
       <ImageWithTextWrapper>
         <ContentStack direction={isImageRight ? "row-reverse" : "row"}>
           <ImageWrapper>
-            <Image src={image} />
+            <AnimationOnScroll animateIn="animate__fadeIn" duration={1.5}>
+              <Image src={image} />
+            </AnimationOnScroll>
           </ImageWrapper>
 
           <Stack>

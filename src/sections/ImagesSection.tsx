@@ -1,3 +1,4 @@
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import { Box } from "@mui/material";
 import { styled } from "@mui/system";
 
@@ -47,7 +48,9 @@ export const ImagesSection = () => {
       <ImagesWrapper>
         {imagesList.map((item) => (
           <ImageWrapper key={item}>
-            <Image src={`images/cats/img_${item}.png`} />
+            <AnimationOnScroll animateIn="animate__fadeIn" duration={1.5}>
+              <Image src={`images/cats/img_${item}.png`} />
+            </AnimationOnScroll>
           </ImageWrapper>
         ))}
       </ImagesWrapper>

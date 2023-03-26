@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { Box, Button, MenuItem, Stack, TextField } from "@mui/material";
 import { styled } from "@mui/system";
@@ -76,7 +77,9 @@ export const ContactUsSection = () => {
     <ContactUsSectionWrapper>
       <ContactUsWrapper>
         <ImageWrapper>
-          <Image src="images/contact_us.svg" />
+          <AnimationOnScroll animateIn="animate__fadeIn" duration={1.5}>
+            <Image src="images/contact_us.svg" />
+          </AnimationOnScroll>
         </ImageWrapper>
         <FormContainer>
           <Box
