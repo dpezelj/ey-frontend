@@ -8,7 +8,7 @@ import { contactUsTitle, galleryTitle, heroTitle } from "./common/constants";
 import { CookiesBanner } from "./components/CookiesBanner";
 import { ContactUsSection } from "./sections/ContactUsSection";
 import { FooterSection } from "./sections/FooterSection";
-import { GallerySection } from "./sections/Gallery";
+import { GallerySection } from "./sections/GallerySection";
 import { HeroSection } from "./sections/HeroSection";
 import { ImagesSection } from "./sections/ImagesSection";
 import { ImageWithTextSection } from "./sections/ImageWithTextSection";
