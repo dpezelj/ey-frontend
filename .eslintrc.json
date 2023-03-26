@@ -68,10 +68,6 @@
             "^react",
             "^@?\\w"
           ],
-          // Assets packages.
-          [
-            "^assets(/.*|$)"
-          ],
           // Core packages.
           [
             "^components(/.*|$)"

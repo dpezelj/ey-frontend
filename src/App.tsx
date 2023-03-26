@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { articlesList } from "./common/articles";
+import { contactUsTitle, galleryTitle, heroTitle } from "./common/constants";
 import { CookiesBanner } from "./components/CookiesBanner";
 import { ContactUsSection } from "./sections/ContactUsSection";
 import { FooterSection } from "./sections/FooterSection";
@@ -36,7 +37,7 @@ export const App = () => {
     <>
       <HeroSection />
       <MainTitleSectionWrapper>
-        <MainTitleSection title={"Daily pet facts - Love!"} />
+        <MainTitleSection title={heroTitle} />
       </MainTitleSectionWrapper>
 
       {articlesList.map((item) => (
@@ -50,14 +51,14 @@ export const App = () => {
       ))}
 
       <Box sx={{ py: "74px", background: "#fff" }}>
-        <MainTitleSection title={"Gallery"} />
+        <MainTitleSection title={galleryTitle} />
       </Box>
 
       <GallerySection />
       <ImagesSection />
 
       <Box sx={{ py: "74px" }}>
-        <MainTitleSection title={"Contact us!"} />
+        <MainTitleSection title={contactUsTitle} />
       </Box>
       <ContactUsSection />
       <CookiesBanner isBanner={isBanner} setIsBanner={setIsBanner} />

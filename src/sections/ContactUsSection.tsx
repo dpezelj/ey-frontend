@@ -3,6 +3,7 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { Box, Button, MenuItem, Stack, TextField } from "@mui/material";
 import { styled } from "@mui/system";
 
+import { contactUsSendButton } from "../common/constants";
 import {
   animalsList,
   emailRules,
@@ -44,6 +45,15 @@ const FormWrapper = styled(Stack)({
   width: "90dvw",
 });
 
+const ImageWrapper = styled(Stack)({
+  flex: 1,
+});
+
+const FormContainer = styled(Stack)({
+  flex: 1,
+  alignItems: "center",
+});
+
 export const ContactUsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -65,10 +75,10 @@ export const ContactUsSection = () => {
   return (
     <ContactUsSectionWrapper>
       <ContactUsWrapper>
-        <Stack sx={{ flex: 1 }}>
+        <ImageWrapper>
           <Image src="images/contact_us.svg" />
-        </Stack>
-        <Stack sx={{ flex: 1, alignItems: "center" }}>
+        </ImageWrapper>
+        <FormContainer>
           <Box
             component={"form"}
             onSubmit={handleSubmit(onSubmitHandler)}
@@ -135,11 +145,11 @@ export const ContactUsSection = () => {
               />
 
               <Button type={"submit"} variant={"outlined"}>
-                Send
+                {contactUsSendButton}
               </Button>
             </FormWrapper>
           </Box>
-        </Stack>
+        </FormContainer>
       </ContactUsWrapper>
       <ContactUsModal
         isModalOpen={isModalOpen}

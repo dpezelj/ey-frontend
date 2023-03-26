@@ -8,6 +8,8 @@ import {
   styled,
 } from "@mui/material";
 
+import { contactUsModal } from "../common/constants";
+
 const StyledDialogTitle = styled(DialogTitle)({
   background: "white",
   color: "black",
@@ -45,17 +47,17 @@ export const ContactUsModal = ({
       }}
     >
       <StyledDialogTitle id="responsive-dialog-title">
-        Uspješna prijava
+        {contactUsModal.title}
       </StyledDialogTitle>
       <StyledDialogContent>
-        <DialogContentText>Uspješno ste se prijavili!</DialogContentText>
+        <DialogContentText>{contactUsModal.content}</DialogContentText>
       </StyledDialogContent>
       <StyledDialogActions>
         <Button autoFocus variant="outlined" onClick={handleClose}>
-          OK
+          {contactUsModal.buttonOk}
         </Button>
         <Button variant="outlined" onClick={handleClose} autoFocus>
-          Close
+          {contactUsModal.buttonCancel}
         </Button>
       </StyledDialogActions>
     </Dialog>

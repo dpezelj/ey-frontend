@@ -1,6 +1,9 @@
 import { useCookies } from "react-cookie";
+import ReactHtmlParser from "react-html-parser";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
+
+import { cookiesBanner } from "../common/constants";
 
 const CookiesBannerWrapper = styled(Box)(({ theme }) => ({
   position: "fixed",
@@ -11,6 +14,7 @@ const CookiesBannerWrapper = styled(Box)(({ theme }) => ({
   height: "auto",
   background: "#ededed",
   animation: "dialogAnim .5s ease-out forwards",
+  zIndex: "999",
 
   [theme?.breakpoints.down("sm")]: {
     margin: 0,
@@ -63,18 +67,14 @@ export const CookiesBanner = ({
   return (
     <CookiesBannerWrapper sx={{ display: isBanner ? "flex" : "none" }}>
       <CookiesBannerContainer gap={2}>
-        <BannerTitle>We use Cookies!</BannerTitle>
-        <BannerBody>
-          Cats have been domesticated for around 4,000 years. While they were
-          once valued for their hunting abilities, they are now valued for their
-          companionship and loving behaviour.
-        </BannerBody>
+        <BannerTitle>{cookiesBanner.title}</BannerTitle>
+        <BannerBody>{ReactHtmlParser(cookiesBanner.content)}</BannerBody>
         <BannerControl flexDirection={"row"} justifyContent={"space-between"}>
           <Button variant={"outlined"} onClick={handleAcceptCookie}>
-            Accept Cookies
+            {cookiesBanner.buttonAccept}
           </Button>
           <Button variant={"outlined"} onClick={handleDeclineCookie}>
-            Decline Cookies
+            {cookiesBanner.buttonDecline}
           </Button>
         </BannerControl>
       </CookiesBannerContainer>
